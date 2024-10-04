@@ -2,8 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key"
-
+app.secret_key = "hgfujhvjmkm214563"
 # Database setup
 def init_db():
     conn = sqlite3.connect('database.db')
