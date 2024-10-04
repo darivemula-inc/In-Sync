@@ -43,6 +43,7 @@ def login():
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
+
 # Logout route
 @app.route('/logout', methods=['POST'])
 def logout():

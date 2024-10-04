@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="navbar">
@@ -14,7 +15,8 @@
         <div class="nav-links">
             <a href="#">Home</a>
             <a href="#">Profile</a>
-            <a href="#">Settings</a>
+            <a href="#">Messages</a>
+            <a href="#">Notifications</a>
             <!-- Logout Form -->
             <form action="{{ url_for('logout') }}" method="POST" style="display:inline;">
                 <button type="submit" style="background:none; border:none; color:blue; cursor:pointer;">Logout</button>
@@ -26,33 +28,58 @@
         <div class="sidebar">
             <ul>
                 <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">User Management</a></li>
+                <li><a href="#">Friends</a></li>
+                <li><a href="#">Groups</a></li>
+                <li><a href="#">Events</a></li>
                 <li><a href="#">Settings</a></li>
             </ul>
         </div>
         
         <div class="content">
-            <h2>Welcome to the Dashboard</h2>
-            <p>Here is an overview of your application statistics:</p>
-            
-            <div class="card-container">
-                <div class="card">
-                    <h3>Total Users</h3>
-                    <p>1200</p>
+            <h2>Feed</h2>
+            <div class="post-form">
+                <textarea placeholder="What's on your mind?"></textarea>
+                <button>Post</button>
+            </div>
+
+            <div class="posts">
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="username">User123</span>
+                        </div>
+                        <span class="post-time">2 hours ago</span>
+                    </div>
+                    <div class="post-content">
+                        <p>Just got back from a great trip to the mountains!</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Active Sessions</h3>
-                    <p>300</p>
+
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="username">User456</span>
+                        </div>
+                        <span class="post-time">3 hours ago</span>
+                    </div>
+                    <div class="post-content">
+                        <p>Can't believe how fast this year is flying by!</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Reports Generated</h3>
-                    <p>450</p>
-                </div>
-                <div class="card">
-                    <h3>Support Tickets</h3>
-                    <p>28</p>
+
+                <div class="post">
+                    <div class="post-header">
+                        <div class="user-info">
+                            <i class="fas fa-user-circle"></i>
+                            <span class="username">User789</span>
+                        </div>
+                        <span class="post-time">5 hours ago</span>
+                    </div>
+                    <div class="post-content">
+                        <p>Check out my new blog post about healthy living!</p>
+                    </div>
                 </div>
             </div>
         </div>
