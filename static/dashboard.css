@@ -1,23 +1,35 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #fafafa;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3b5998;
+    background-color: #ffffff;
     padding: 10px 20px;
-    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo h1 {
+    font-size: 24px;
+    color: #262626;
 }
 
 .nav-links a {
-    color: white;
+    color: #262626;
     margin: 0 15px;
     text-decoration: none;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    color: #0095f6;
+    cursor: pointer;
 }
 
 .dashboard-container {
@@ -43,7 +55,8 @@ body {
 
 .sidebar li a {
     text-decoration: none;
-    color: #333;
+    color: #262626;
+    font-weight: bold;
 }
 
 .content {
@@ -69,7 +82,7 @@ body {
 
 .post-form button {
     float: right;
-    background-color: #3b5998;
+    background-color: #0095f6;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -86,29 +99,41 @@ body {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
-}
-
-.post-header {
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .user-info {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .user-info i {
-    font-size: 24px;
+    font-size: 30px;
+    color: #0095f6;
     margin-right: 10px;
-    color: #3b5998;
 }
 
-.username {
-    font-weight: bold;
+.post img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.post-time {
-    color: #999;
+.post-footer {
+    margin-top: 10px;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.post-actions button {
+    background: none;
+    border: none;
+    color: #0095f6;
+    cursor: pointer;
+    font-size: 16px;
 }

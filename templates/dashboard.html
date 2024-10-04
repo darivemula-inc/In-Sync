@@ -10,7 +10,7 @@
 <body>
     <div class="navbar">
         <div class="logo">
-            <h1>Welcome, {{ username }}!</h1>
+            <h1>Insync</h1>
         </div>
         <div class="nav-links">
             <a href="#">Home</a>
@@ -19,7 +19,7 @@
             <a href="#">Notifications</a>
             <!-- Logout Form -->
             <form action="{{ url_for('logout') }}" method="POST" style="display:inline;">
-                <button type="submit" style="background:none; border:none; color:blue; cursor:pointer;">Logout</button>
+                <button type="submit" class="logout-button">Logout</button>
             </form>
         </div>
     </div>
@@ -27,16 +27,16 @@
     <div class="dashboard-container">
         <div class="sidebar">
             <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Friends</a></li>
-                <li><a href="#">Groups</a></li>
-                <li><a href="#">Events</a></li>
+                <li><a href="#">Feed</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Reels</a></li>
+                <li><a href="#">Shop</a></li>
                 <li><a href="#">Settings</a></li>
             </ul>
         </div>
         
         <div class="content">
-            <h2>Feed</h2>
+            <h2>Your Feed</h2>
             <div class="post-form">
                 <textarea placeholder="What's on your mind?"></textarea>
                 <button>Post</button>
@@ -44,41 +44,47 @@
 
             <div class="posts">
                 <div class="post">
-                    <div class="post-header">
-                        <div class="user-info">
-                            <i class="fas fa-user-circle"></i>
-                            <span class="username">User123</span>
-                        </div>
-                        <span class="post-time">2 hours ago</span>
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="username">User123</span>
                     </div>
-                    <div class="post-content">
-                        <p>Just got back from a great trip to the mountains!</p>
+                    <img src="https://via.placeholder.com/600x400" alt="Post Image">
+                    <div class="post-footer">
+                        <p>Enjoying a beautiful day in the park! 🌳</p>
+                        <div class="post-actions">
+                            <button><i class="fas fa-heart"></i> Like</button>
+                            <button><i class="fas fa-comment"></i> Comment</button>
+                        </div>
                     </div>
                 </div>
 
                 <div class="post">
-                    <div class="post-header">
-                        <div class="user-info">
-                            <i class="fas fa-user-circle"></i>
-                            <span class="username">User456</span>
-                        </div>
-                        <span class="post-time">3 hours ago</span>
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="username">User456</span>
                     </div>
-                    <div class="post-content">
-                        <p>Can't believe how fast this year is flying by!</p>
+                    <img src="https://via.placeholder.com/600x400" alt="Post Image">
+                    <div class="post-footer">
+                        <p>Life is better with friends! 😊</p>
+                        <div class="post-actions">
+                            <button><i class="fas fa-heart"></i> Like</button>
+                            <button><i class="fas fa-comment"></i> Comment</button>
+                        </div>
                     </div>
                 </div>
 
                 <div class="post">
-                    <div class="post-header">
-                        <div class="user-info">
-                            <i class="fas fa-user-circle"></i>
-                            <span class="username">User789</span>
-                        </div>
-                        <span class="post-time">5 hours ago</span>
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="username">User789</span>
                     </div>
-                    <div class="post-content">
-                        <p>Check out my new blog post about healthy living!</p>
+                    <img src="https://via.placeholder.com/600x400" alt="Post Image">
+                    <div class="post-footer">
+                        <p>Just a moment from yesterday! 📸</p>
+                        <div class="post-actions">
+                            <button><i class="fas fa-heart"></i> Like</button>
+                            <button><i class="fas fa-comment"></i> Comment</button>
+                        </div>
                     </div>
                 </div>
             </div>
