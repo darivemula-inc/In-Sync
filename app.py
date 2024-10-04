@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 import sqlite3
 
 app = Flask(__name__)
@@ -31,6 +31,7 @@ def login():
         conn.close()
 
         if user:
+            session['username'] = username 
             flash('Login successful!', 'success')
             return redirect(url_for('dashboard'))
         else:
@@ -42,6 +43,12 @@ def login():
 @app.route('/dashboard')
 def dashboard():
     return render_template('dashboard.html')
+# Logout route
+@app.route('/logout', methods=['POST'])
+def logout():
+    session.pop('username', None)  # Remove username from session
+    flash('You have been logged out.', 'success')
+    return redirect(url_for('login'))
 
 if __name__ == '__main__':
     init_db()
